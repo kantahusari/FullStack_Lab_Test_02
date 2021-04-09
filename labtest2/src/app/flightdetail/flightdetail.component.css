@@ -1,0 +1,14 @@
+.image {
+  width: 100px;
+  height: 100px;
+}
+.tablerow{
+    border: 1px solid black;
+}
+.tripid{
+    display:none;
+}
+
+.flightdetailcontainer{
+  margin-left: 15px;
+}

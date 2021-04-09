@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+<h1>{{student}}</h1>
+<h1>{{studentNumber}}</h1>
+
+
+<div style="text-align:center">
+    <h1>
+        All Flight List
+    </h1>
+
+</div>
+
+<dl *ngFor="let trip of data">
+    <div class="tablerow">
+
+        <br>
+        <td class="tripid">{{trip.flight_number}}</td>
+        <dd><img src={{trip.links.mission_patch_small}} class="image"> </dd>
+        <dd>{{trip.mission_name}}</dd>
+        <dd>{{trip.launch_year}}</dd>
+        <dd>{{trip.details}}</dd>
+        <br>
+        <dd><button (click)="goToPage('flightdetail',trip.flight_number)" mat-stroked-button color="accent">Details</button></dd>
+
+        <br>
+    </div>
+</dl>

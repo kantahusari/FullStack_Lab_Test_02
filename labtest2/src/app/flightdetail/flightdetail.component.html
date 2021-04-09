@@ -1,0 +1,43 @@
+<h1>Mission Details</h1>
+
+
+<!-- <dl *ngFor="let trip of data"> -->
+<dl *ngFor="let trip of data">
+    <div *ngIf="trip.flight_number == catchFlightNumber ">
+        <div class="tablerow">
+
+                <br>
+                <dd class="tripid">{{trip.flight_number}}</dd>
+                <dd><img src={{trip.links.mission_patch_small}} class="image"> </dd>
+                
+                <br>
+                <dt class="flightdetailcontainer">Mission Name:</dt>
+                <dd>{{trip.mission_name}}</dd>
+                
+                <br>
+                <dt class="flightdetailcontainer">Mission Year:</dt>
+                <dd>{{trip.launch_year}}</dd>
+
+                <dt class="flightdetailcontainer">Launch Site:</dt>
+                <dd>{{trip.launch_site.site_name}}</dd>
+                <br>
+                <dt class="flightdetailcontainer">Rocket:</dt>
+                <dd>{{trip.rocket.rocket_name}}</dd>
+
+                <br>
+                <dt class="flightdetailcontainer">Launch Details:</dt>
+                <dd>{{trip.details}}</dd>
+
+                <br>
+                <dd><button (click)="goToPage('')" mat-stroked-button color="accent">back</button></dd>
+                <br>
+
+        </div>
+    </div>
+</dl>
+
+<!-- 
+    rocket_id: "falcon1"
+rocket_name: "Falcon 1"
+rocket_type: "Merlin A"
+ -->
